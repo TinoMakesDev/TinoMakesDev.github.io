@@ -182,8 +182,8 @@
             <a href="./index.html">← Back to Home</a>
         </div>
 
-       <h1 style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-    <img src="./screenshots/memoryCalendar/iconDone_512.png" alt="Memory Calendar Icon" style="width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h1>
+    <img src="./screenshots/memoryCalendar/iconDone_512.png" alt="Memory Calendar Icon" style="width: 52px; height: 52px; border-radius: 12px; margin-right: 16px; vertical-align: middle; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: relative; top: -4px;">
     Memory Calendar: The Free, Private Photo Organizer
 </h1>
 
