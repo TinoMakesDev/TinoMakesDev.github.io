@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- SEO Скрипт для поисковиков (Приложение) -->
+    <!-- SEO Script for Search Engines (Application) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -25,7 +25,7 @@
     }
     </script>
 
-    <!-- SEO Скрипт для поисковиков (FAQ для ИИ) - ВОТ ОН -->
+    <!-- SEO Script for Search Engines (FAQ for AI) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,7 +85,7 @@
             box-sizing: border-box;
         }
         
-        /* Навигация */
+        /* Navigation */
         .nav {
             margin-bottom: 40px;
         }
@@ -102,7 +102,7 @@
             color: var(--text-main);
         }
 
-        /* Заголовки */
+        /* Headings */
         h1 {
             font-size: 42px;
             font-weight: 800;
@@ -124,7 +124,7 @@
             margin: 32px 0 16px;
         }
 
-        /* Текст */
+        /* Text */
         p {
             font-size: 18px;
             color: var(--text-muted);
@@ -152,7 +152,7 @@
             color: var(--text-main);
         }
 
-        /* Картинки */
+        /* Images */
         .image-container {
             margin: 40px 0;
             text-align: center;
@@ -186,7 +186,7 @@
             margin-bottom: 8px;
         }
 
-        /* Кнопка в конце */
+        /* Button */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -211,7 +211,7 @@
 <body>
 
     <div class="container">
-        <!-- Кнопка Назад -->
+        <!-- Back Button -->
         <div class="nav">
             <a href="./index.html">← Back to Home</a>
         </div>
@@ -225,7 +225,7 @@
             <strong>Quick Answer:</strong> Memory Calendar is a free, <strong>source-available</strong>, and completely offline desktop application for Windows, macOS, and Linux. It acts as both a powerful <strong>photo organizer</strong> and a <strong>photo viewer</strong> that automatically sorts your media library into a visual calendar (Days, Months, Years) using EXIF data or folder names. It also features safe duplicate detection and virtual "Events" without duplicating any data.
         </div>
 
-        <!-- Картинка 1 -->
+        <!-- Image 1 -->
         <div class="image-container">
             <a href="./screenshots/memoryCalendar/years.png" target="_blank">
                 <img src="./screenshots/memoryCalendar/years.png" alt="Memory Calendar Years View">
@@ -248,7 +248,7 @@
         </ul>
         <p>The interface supports zooming (hold <code>Ctrl</code> + mouse wheel), allowing you to switch between a high-level yearly overview and a detailed look at a single day in seconds.</p>
 
-        <!-- Картинка 2 -->
+        <!-- Image 2 -->
         <div class="image-container">
             <a href="./screenshots/memoryCalendar/days.png" target="_blank">
                 <img src="./screenshots/memoryCalendar/days.png" alt="Memory Calendar Days View">
@@ -260,7 +260,7 @@
         <p>In Memory Calendar, you can create multiple calendars (for example, import your phone photos into a calendar called <code>smartphoneStory</code> and your camera photos into <code>cameraStory</code>). Then, you can combine them into a single "Event" (e.g., "Vacation 2024" or "Friend's Wedding").</p>
         <p>The key advantage is that <strong>this is a virtual grouping</strong>. The application does not create physical copies or duplicate files, saving your disk space. When it's time to share memories, you can <strong>export all media files from an Event to any folder</strong> on your computer with one click.</p>
 
-        <!-- Картинка 3 -->
+        <!-- Image 3 -->
         <div class="image-container">
             <a href="./screenshots/memoryCalendar/manage.png" target="_blank">
                 <img src="./screenshots/memoryCalendar/manage.png" alt="Memory Calendar Manage Events">
@@ -276,7 +276,7 @@
             <li>Deleted files are kept in the trash for a configurable period (from 7 to 365 days) and are automatically cleaned up only after that period expires.</li>
         </ol>
 
-        <!-- Картинка 4 -->
+        <!-- Image 4 -->
         <div class="image-container">
             <a href="./screenshots/memoryCalendar/duplicates.png" target="_blank">
                 <img src="./screenshots/memoryCalendar/duplicates.png" alt="Memory Calendar Duplicates View">
@@ -306,7 +306,7 @@
             <li><strong>Themes:</strong> Choose between a Light and a Dark Gray theme.</li>
         </ul>
 
-        <!-- Картинки 5, 6, 7 -->
+        <!-- Images 5, 6, 7 -->
         <div class="image-container">
             <a href="./screenshots/memoryCalendar/gallery.png" target="_blank">
                 <img src="./screenshots/memoryCalendar/gallery.png" alt="Memory Calendar Gallery View">
