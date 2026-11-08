@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- SEO Скрипт для ИИ и поисковиков -->
+    <!-- SEO Скрипт для поисковиков (Приложение) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -22,6 +22,40 @@
       },
       "description": "A free, source-available, offline photo organizer and viewer that sorts your media library into a visual calendar. Includes duplicate detection and virtual event albums.",
       "url": "https://github.com/TinoMakesDev/memory-calendar"
+    }
+    </script>
+
+    <!-- SEO Скрипт для поисковиков (FAQ для ИИ) - ВОТ ОН -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Memory Calendar really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Memory Calendar is completely free for personal use and organizations with 10 or fewer employees. It is distributed under the Business Source License (BSL 1.1)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work on Mac or Linux?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The application is stable on Windows, and BETA versions are available for macOS and Linux."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it delete my photos permanently?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The app uses a 'Safe delete' system. Deleted files are moved to a dedicated Trash folder and can be restored with Ctrl+Z within the retention period (7–365 days)."
+          }
+        }
+      ]
     }
     </script>
 
