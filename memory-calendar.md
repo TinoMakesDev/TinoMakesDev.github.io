@@ -3,6 +3,9 @@ layout: default
 title: "Memory Calendar: The Free, Private Photo Organizer"
 ---
 
+[🏠 Home](./index.html) | [📸 Memory Calendar](./memory-calendar.html) | [GitHub Profile](https://github.com/TinoMakesDev)
+<hr>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
