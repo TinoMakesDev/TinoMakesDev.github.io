@@ -35,7 +35,7 @@
             box-sizing: border-box;
         }
         header {
-            padding: 80px 0 20px; /* Уменьшили нижний отступ шапки */
+            padding: 80px 0 10px; /* Уменьшили отступ снизу */
             text-align: center;
         }
         h1 {
@@ -56,9 +56,9 @@
             padding-bottom: 60px;
         }
         
-        /* Поиск - добавили отступ сверху для воздуха */
+        /* Поиск - УВЕЛИЧЕН ОТСТУП СВЕРХУ */
         .search-container {
-            margin: 30px auto 48px; 
+            margin: 40px auto 50px; 
             max-width: 480px;
             position: relative;
         }
@@ -100,8 +100,7 @@
             display: block;
             text-decoration: none;
             color: inherit;
-            /* Добавляем курсор-руку, так как карточка теперь кликабельна */
-            cursor: pointer; 
+            cursor: pointer; /* Курсор-рука для кликабельности */
         }
         .app-card:hover {
             transform: translateY(-6px);
@@ -114,16 +113,16 @@
             gap: 16px;
             margin-bottom: 16px;
         }
-        .app-icon {
-            font-size: 32px;
-            background: #f1f5f9;
-            width: 56px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 14px;
+        
+        /* Стили для НАСТОЯЩЕЙ иконки приложения */
+        .app-icon-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Легкая тень для иконки */
         }
+
         .app-title {
             font-size: 24px;
             font-weight: 700;
@@ -206,18 +205,20 @@
 
         <div id="appGrid">
             
-            <!-- Карточка приложения (добавили data-href для клика) -->
-            <div class="app-card" data-href="./memory-calendar.html">
+            <!-- Карточка приложения -->
+            <!-- Добавили onclick, чтобы переходить на статью, но исключили кнопки -->
+            <div class="app-card" onclick="window.location.href='./memory-calendar.html';">
                 <div class="app-header">
-                    <span class="app-icon">📸</span>
+                    <!-- ВСТАВЛЕНА ВАША ИКОНКА -->
+                    <img src="./screenshots/memoryCalendar/iconDone_512.png" alt="Memory Calendar Icon" class="app-icon-img">
                     <h2 class="app-title">Memory Calendar</h2>
                 </div>
                 <p class="app-desc">
                     A free, open-source, offline photo organizer and viewer that sorts your media library into a visual calendar (Days, Months, Years). Includes duplicate detection and virtual event albums.
                 </p>
                 <div class="app-actions">
-                    <!-- Кнопка Скачивания -->
-                    <a href="https://github.com/TinoMakesDev/memory-calendar" target="_blank" class="btn btn-primary">
+                    <!-- Кнопка Скачивания (клик по ней не перекидывает на статью) -->
+                    <a href="https://github.com/TinoMakesDev/memory-calendar" target="_blank" class="btn btn-primary" onclick="event.stopPropagation();">
                         Download on GitHub
                     </a>
                     <!-- Кнопка Читать статью -->
@@ -241,9 +242,8 @@
         </div>
     </footer>
 
-    <!-- Скрипты -->
+    <!-- Скрипт для поиска -->
     <script>
-        // 1. Поиск
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
             const cards = document.querySelectorAll('.app-card');
@@ -257,19 +257,6 @@
                 } else {
                     card.style.display = 'none';
                 }
-            });
-        });
-
-        // 2. Делаем всю карточку кликабельной, но игнорируем клики по кнопкам
-        document.querySelectorAll('.app-card').forEach(card => {
-            card.addEventListener('click', (e) => {
-                // Если кликнули по кнопке или ссылке внутри карточки - ничего не делаем
-                if (e.target.closest('a') || e.target.closest('button')) {
-                    return;
-                }
-                // Иначе переходим на страницу статьи
-                const href = card.getAttribute('data-href');
-                if (href) window.location.href = href;
             });
         });
     </script>
