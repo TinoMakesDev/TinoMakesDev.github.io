@@ -216,7 +216,7 @@
                 <div class="app-actions">
                     <!-- Кнопка Скачивания -->
                     <a href="https://github.com/TinoMakesDev/memory-calendar" target="_blank" class="btn btn-primary">
-                        ⬇️ Download on GitHub
+                        Download on GitHub
                     </a>
                     <!-- Кнопка Читать статью -->
                     <a href="./memory-calendar.html" class="btn btn-secondary">
