@@ -1,4 +1,5 @@
 title: TinoMakesDev
 description: Free, privacy-focused, and open-source desktop applications.
-theme: jekyll-theme-cayman
-show_downloads: false
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+plugins:
+  - jekyll-include-cache
