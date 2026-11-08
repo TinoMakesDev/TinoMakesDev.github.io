@@ -1,5 +1,13 @@
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5W98DWWV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinoMakesDev - Source-Available Apps</title>
@@ -35,7 +43,7 @@
             box-sizing: border-box;
         }
         header {
-            padding: 80px 0 10px; /* Reduced bottom padding */
+            padding: 80px 0 10px;
             text-align: center;
         }
         h1 {
@@ -56,7 +64,7 @@
             padding-bottom: 60px;
         }
         
-        /* Search - increased top margin for better spacing */
+        /* Search */
         .search-container {
             margin: 40px auto 50px; 
             max-width: 480px;
@@ -100,7 +108,7 @@
             display: block;
             text-decoration: none;
             color: inherit;
-            cursor: pointer; /* Pointer cursor for clickability */
+            cursor: pointer;
         }
         .app-card:hover {
             transform: translateY(-6px);
@@ -114,13 +122,12 @@
             margin-bottom: 16px;
         }
         
-        /* Styles for the actual app icon */
         .app-icon-img {
             width: 64px;
             height: 64px;
             border-radius: 16px;
             object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Slight shadow for the icon */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .app-title {
@@ -136,7 +143,6 @@
             margin: 0 0 24px 0;
         }
         
-        /* Button container */
         .app-actions {
             display: flex;
             gap: 12px;
@@ -155,7 +161,6 @@
             cursor: pointer;
             font-family: 'Inter', sans-serif;
         }
-        /* Primary Download button */
         .btn-primary {
             background-color: var(--btn-primary);
             color: white;
@@ -167,7 +172,6 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 15px rgba(0,0,0,0.15);
         }
-        /* Read button */
         .btn-secondary {
             background-color: transparent;
             color: var(--text-main);
@@ -195,7 +199,6 @@
     </header>
 
     <main class="container">
-        <!-- Search -->
         <div class="search-container">
             <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -204,12 +207,8 @@
         </div>
 
         <div id="appGrid">
-            
-            <!-- App Card -->
-            <!-- Added onclick to navigate to the article, but excluded buttons -->
             <div class="app-card" onclick="window.location.href='./memory-calendar.html';">
                 <div class="app-header">
-                    <!-- ACTUAL APP ICON -->
                     <img src="./screenshots/memoryCalendar/iconDone_512.png" alt="Memory Calendar Icon" class="app-icon-img">
                     <h2 class="app-title">Memory Calendar</h2>
                 </div>
@@ -217,18 +216,15 @@
                     A free, source-available, offline photo organizer and viewer that sorts your media library into a visual calendar (Days, Months, Years). Includes duplicate detection and virtual event albums.
                 </p>
                 <div class="app-actions">
-                    <!-- Download Button (clicking it does not redirect to the article) -->
                     <a href="https://github.com/TinoMakesDev/memory-calendar" target="_blank" class="btn btn-primary" onclick="event.stopPropagation();">
                         Download on GitHub
                     </a>
-                    <!-- Read Article Button -->
                     <a href="./memory-calendar.html" class="btn btn-secondary">
                         Read Article
                     </a>
                 </div>
             </div>
 
-            <!-- Placeholder -->
             <div style="text-align: center; color: #94a3b8; padding: 20px 0; font-size: 15px;">
                 (More apps coming soon...)
             </div>
@@ -242,7 +238,6 @@
         </div>
     </footer>
 
-    <!-- Search Script -->
     <script>
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
