@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://tinomakesdev.github.io/sitemap.xml
+
+# AI crawlers can find the summary at: https://tinomakesdev.github.io/llms.txt
