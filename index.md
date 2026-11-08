@@ -1,6 +1,3 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +14,7 @@ layout: null
             --text-muted: #64748b;
             --border: #e2e8f0;
             --card-bg: #ffffff;
-            --btn-primary: #0f172a; /* Строгий черный для кнопки Download */
+            --btn-primary: #0f172a;
             --btn-hover: #1e293b;
         }
         body {
@@ -105,7 +102,6 @@ layout: null
             text-decoration: none;
             color: inherit;
         }
-        /* Красивая анимация поднятия карточки */
         .app-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
@@ -150,28 +146,28 @@ layout: null
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 24px;
-            font-size: 15px;
-            font-weight: 500;
-            border-radius: 10px;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 12px;
             text-decoration: none;
             transition: all 0.2s ease;
             cursor: pointer;
             font-family: 'Inter', sans-serif;
         }
-        /* Главная кнопка (Скачать) */
+        /* Главная кнопка Скачивания */
         .btn-primary {
             background-color: var(--btn-primary);
             color: white;
             border: 1px solid var(--btn-primary);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         .btn-primary:hover {
             background-color: var(--btn-hover);
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
         }
-        /* Второстепенная кнопка (Читать статью) */
+        /* Кнопка Читать */
         .btn-secondary {
             background-color: transparent;
             color: var(--text-main);
@@ -209,7 +205,7 @@ layout: null
 
         <div id="appGrid">
             
-            <!-- Карточка приложения -->
+            <!-- Карточка приложения с кнопками -->
             <div class="app-card">
                 <div class="app-header">
                     <span class="app-icon">📸</span>
@@ -219,9 +215,11 @@ layout: null
                     A free, open-source, offline photo organizer and viewer that sorts your media library into a visual calendar (Days, Months, Years). Includes duplicate detection and virtual event albums.
                 </p>
                 <div class="app-actions">
+                    <!-- Кнопка Скачивания -->
                     <a href="https://github.com/TinoMakesDev/memory-calendar" target="_blank" class="btn btn-primary">
-                        Download on GitHub
+                        ⬇️ Download on GitHub
                     </a>
+                    <!-- Кнопка Читать статью -->
                     <a href="./memory-calendar.html" class="btn btn-secondary">
                         Read Article
                     </a>
