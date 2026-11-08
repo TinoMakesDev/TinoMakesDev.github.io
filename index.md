@@ -184,12 +184,36 @@
             border-color: #94a3b8;
         }
 
+        /* Footer & Links */
         footer {
             border-top: 1px solid var(--border);
-            padding: 32px 0;
+            padding: 40px 0;
             text-align: center;
             color: #94a3b8;
             font-size: 14px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--text-main);
+        }
+        .footer-links a.support-link {
+            color: #e11d48;
+            font-weight: 600;
+        }
+        .footer-links a.support-link:hover {
+            color: #be123c;
         }
     </style>
 </head>
@@ -236,7 +260,13 @@
 
     <footer>
         <div class="container">
-            &copy; 2026 TinoMakesDev.
+            <div class="footer-links">
+                <a href="https://github.com/TinoMakesDev" target="_blank">GitHub</a>
+                <a href="https://t.me/+lgzAbsvkPi9lYjIy" target="_blank">Telegram</a>
+                <a href="https://app.lava.top/tinomakesdev?tabId=donate" target="_blank" class="support-link">❤️ Support Project</a>
+                <a href="https://app.lava.top/tinomakesdev?tabId=subscriptions" target="_blank">Commercial License</a>
+            </div>
+            <div>&copy; 2026 TinoMakesDev. All rights reserved.</div>
         </div>
     </footer>
 
