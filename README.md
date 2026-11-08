@@ -2,7 +2,7 @@
 
 Welcome to the source code for my personal developer website and blog. 
 
-Here I share articles, guides, and documentation for my open-source applications. All my tools are built with a focus on **privacy, offline-first functionality, and local data ownership**.
+Here I share articles, guides, and documentation for my source-available applications. All my tools are built with a focus on **privacy, offline-first functionality, and local data ownership**.
 
 ## 🌐 Live Website
 You can read the full articles and download the apps here: 
