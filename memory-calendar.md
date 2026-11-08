@@ -317,7 +317,7 @@
         <p>If you value privacy, are tired of cloud subscriptions, and want a convenient way to browse your family photo archive—neatly sorted and organized—give this project a try.</p>
 
         <a href="https://github.com/TinoMakesDev/memory-calendar" target="_blank" class="btn">
-            ⬇️ Download on GitHub
+            Download on GitHub
         </a>
 
     </div>
