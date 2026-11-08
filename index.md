@@ -7,22 +7,22 @@ layout: null
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinoMakesDev - Open Source Apps</title>
-    <!-- Подключаем шрифт Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-gradient: radial-gradient(circle at top, #ffffff 0%, #f3f4f6 100%);
-            --text-main: #111827;
-            --text-muted: #6b7280;
-            --border: #e5e7eb;
+            --bg: #f8fafc;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
             --card-bg: #ffffff;
-            --accent: #000000;
+            --btn-primary: #0f172a; /* Строгий черный для кнопки Download */
+            --btn-hover: #1e293b;
         }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-gradient);
+            background-color: var(--bg);
             color: var(--text-main);
             margin: 0;
             padding: 0;
@@ -32,24 +32,22 @@ layout: null
             -webkit-font-smoothing: antialiased;
         }
         .container {
-            max-width: 800px;
+            max-width: 760px;
             margin: 0 auto;
             padding: 0 24px;
             width: 100%;
             box-sizing: border-box;
         }
         header {
-            padding: 100px 0 60px;
+            padding: 80px 0 50px;
             text-align: center;
         }
         h1 {
-            font-size: 52px;
+            font-size: 48px;
             font-weight: 800;
             letter-spacing: -0.04em;
             margin: 0 0 16px;
-            background: linear-gradient(135deg, #111 0%, #333 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-main);
         }
         .subtitle {
             font-size: 20px;
@@ -59,39 +57,37 @@ layout: null
         }
         main {
             flex-grow: 1;
-            padding-bottom: 80px;
+            padding-bottom: 60px;
         }
         
         /* Поиск */
         .search-container {
-            margin: 0 auto 48px;
+            margin: 0 auto 40px;
             max-width: 480px;
             position: relative;
         }
         .search-input {
             width: 100%;
-            padding: 16px 24px 16px 52px;
+            padding: 14px 20px 14px 48px;
             font-size: 16px;
             border: 1px solid var(--border);
-            border-radius: 100px;
+            border-radius: 12px;
             box-sizing: border-box;
             outline: none;
             transition: all 0.3s ease;
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+            background-color: var(--card-bg);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
             font-family: 'Inter', sans-serif;
         }
         .search-input:focus {
-            border-color: #9ca3af;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
-            background-color: #fff;
+            border-color: #94a3b8;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .search-icon {
             position: absolute;
-            left: 20px;
-            top: 17px;
-            color: #9ca3af;
+            left: 16px;
+            top: 15px;
+            color: #94a3b8;
             width: 20px;
             height: 20px;
         }
@@ -100,34 +96,20 @@ layout: null
         .app-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
-            border-radius: 24px; /* Более круглые углы */
-            padding: 40px;
+            border-radius: 20px;
+            padding: 32px;
             margin-bottom: 24px;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
             display: block;
             text-decoration: none;
             color: inherit;
-            position: relative;
-            overflow: hidden;
         }
-        /* Эффект свечения при наведении */
-        .app-card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 100%;
-            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(0,0,0,0.03), transparent 40%);
-            opacity: 0;
-            transition: opacity 0.4s;
-            pointer-events: none;
-        }
-        .app-card:hover::before {
-            opacity: 1;
-        }
+        /* Красивая анимация поднятия карточки */
         .app-card:hover {
-            transform: translateY(-4px) scale(1.01);
+            transform: translateY(-6px);
             box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
-            border-color: #d1d5db;
+            border-color: #cbd5e1;
         }
         .app-header {
             display: flex;
@@ -137,50 +119,75 @@ layout: null
         }
         .app-icon {
             font-size: 32px;
-            background: #f3f4f6;
-            width: 64px;
-            height: 64px;
+            background: #f1f5f9;
+            width: 56px;
+            height: 56px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 16px;
-            box-shadow: inset 0 2px 4px rgba(255,255,255,0.5), 0 2px 4px rgba(0,0,0,0.05);
+            border-radius: 14px;
         }
         .app-title {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 700;
             margin: 0;
             letter-spacing: -0.02em;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .app-title::after {
-            content: "→";
-            opacity: 0;
-            transition: opacity 0.2s, transform 0.3s;
-            transform: translateX(-10px);
-            font-weight: 400;
-            color: #9ca3af;
-        }
-        .app-card:hover .app-title::after {
-            opacity: 1;
-            transform: translateX(0);
         }
         .app-desc {
             color: var(--text-muted);
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.6;
-            margin: 0;
-            max-width: 90%;
+            margin: 0 0 24px 0;
         }
+        
+        /* Блок с кнопками */
+        .app-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        /* Главная кнопка (Скачать) */
+        .btn-primary {
+            background-color: var(--btn-primary);
+            color: white;
+            border: 1px solid var(--btn-primary);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-primary:hover {
+            background-color: var(--btn-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        /* Второстепенная кнопка (Читать статью) */
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover {
+            background-color: #f8fafc;
+            border-color: #94a3b8;
+        }
+
         footer {
             border-top: 1px solid var(--border);
             padding: 32px 0;
             text-align: center;
-            color: #9ca3af;
+            color: #94a3b8;
             font-size: 14px;
-            background: rgba(255,255,255,0.5);
         }
     </style>
 </head>
@@ -202,8 +209,8 @@ layout: null
 
         <div id="appGrid">
             
-            <!-- Карточка (полностью кликабельная) -->
-            <a href="./memory-calendar.html" class="app-card">
+            <!-- Карточка приложения -->
+            <div class="app-card">
                 <div class="app-header">
                     <span class="app-icon">📸</span>
                     <h2 class="app-title">Memory Calendar</h2>
@@ -211,10 +218,18 @@ layout: null
                 <p class="app-desc">
                     A free, open-source, offline photo organizer and viewer that sorts your media library into a visual calendar (Days, Months, Years). Includes duplicate detection and virtual event albums.
                 </p>
-            </a>
+                <div class="app-actions">
+                    <a href="https://github.com/TinoMakesDev/memory-calendar" target="_blank" class="btn btn-primary">
+                        Download on GitHub
+                    </a>
+                    <a href="./memory-calendar.html" class="btn btn-secondary">
+                        Read Article
+                    </a>
+                </div>
+            </div>
 
             <!-- Заглушка -->
-            <div style="text-align: center; color: #9ca3af; padding: 20px 0; font-size: 15px;">
+            <div style="text-align: center; color: #94a3b8; padding: 20px 0; font-size: 15px;">
                 (More apps coming soon...)
             </div>
 
@@ -227,9 +242,8 @@ layout: null
         </div>
     </footer>
 
-    <!-- Поиск и эффект мыши на карточках -->
+    <!-- Скрипт для поиска -->
     <script>
-        // Поиск
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
             const cards = document.querySelectorAll('.app-card');
@@ -243,17 +257,6 @@ layout: null
                 } else {
                     card.style.display = 'none';
                 }
-            });
-        });
-
-        // Эффект "фонарика" на карточке
-        document.querySelectorAll('.app-card').forEach(card => {
-            card.addEventListener('mousemove', e => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
             });
         });
     </script>
