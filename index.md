@@ -35,7 +35,7 @@
             box-sizing: border-box;
         }
         header {
-            padding: 80px 0 10px; /* Уменьшили отступ снизу */
+            padding: 80px 0 10px; /* Reduced bottom padding */
             text-align: center;
         }
         h1 {
@@ -56,7 +56,7 @@
             padding-bottom: 60px;
         }
         
-        /* Поиск - УВЕЛИЧЕН ОТСТУП СВЕРХУ */
+        /* Search - increased top margin for better spacing */
         .search-container {
             margin: 40px auto 50px; 
             max-width: 480px;
@@ -88,7 +88,7 @@
             height: 20px;
         }
 
-        /* Карточки */
+        /* App Cards */
         .app-card {
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -100,7 +100,7 @@
             display: block;
             text-decoration: none;
             color: inherit;
-            cursor: pointer; /* Курсор-рука для кликабельности */
+            cursor: pointer; /* Pointer cursor for clickability */
         }
         .app-card:hover {
             transform: translateY(-6px);
@@ -114,13 +114,13 @@
             margin-bottom: 16px;
         }
         
-        /* Стили для НАСТОЯЩЕЙ иконки приложения */
+        /* Styles for the actual app icon */
         .app-icon-img {
             width: 64px;
             height: 64px;
             border-radius: 16px;
             object-fit: cover;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Легкая тень для иконки */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Slight shadow for the icon */
         }
 
         .app-title {
@@ -136,7 +136,7 @@
             margin: 0 0 24px 0;
         }
         
-        /* Блок с кнопками */
+        /* Button container */
         .app-actions {
             display: flex;
             gap: 12px;
@@ -155,7 +155,7 @@
             cursor: pointer;
             font-family: 'Inter', sans-serif;
         }
-        /* Главная кнопка Скачивания */
+        /* Primary Download button */
         .btn-primary {
             background-color: var(--btn-primary);
             color: white;
@@ -167,7 +167,7 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 15px rgba(0,0,0,0.15);
         }
-        /* Кнопка Читать */
+        /* Read button */
         .btn-secondary {
             background-color: transparent;
             color: var(--text-main);
@@ -191,11 +191,11 @@
 
     <header class="container">
         <h1>TinoMakesDev</h1>
-        <p class="subtitle">Free, privacy-focused, and open-source applications.</p>
+        <p class="subtitle">Free, privacy-focused, and source-available applications.</p>
     </header>
 
     <main class="container">
-        <!-- Поиск -->
+        <!-- Search -->
         <div class="search-container">
             <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -205,30 +205,30 @@
 
         <div id="appGrid">
             
-            <!-- Карточка приложения -->
-            <!-- Добавили onclick, чтобы переходить на статью, но исключили кнопки -->
+            <!-- App Card -->
+            <!-- Added onclick to navigate to the article, but excluded buttons -->
             <div class="app-card" onclick="window.location.href='./memory-calendar.html';">
                 <div class="app-header">
-                    <!-- ВСТАВЛЕНА ВАША ИКОНКА -->
+                    <!-- ACTUAL APP ICON -->
                     <img src="./screenshots/memoryCalendar/iconDone_512.png" alt="Memory Calendar Icon" class="app-icon-img">
                     <h2 class="app-title">Memory Calendar</h2>
                 </div>
                 <p class="app-desc">
-                    A free, open-source, offline photo organizer and viewer that sorts your media library into a visual calendar (Days, Months, Years). Includes duplicate detection and virtual event albums.
+                    A free, source-available, offline photo organizer and viewer that sorts your media library into a visual calendar (Days, Months, Years). Includes duplicate detection and virtual event albums.
                 </p>
                 <div class="app-actions">
-                    <!-- Кнопка Скачивания (клик по ней не перекидывает на статью) -->
+                    <!-- Download Button (clicking it does not redirect to the article) -->
                     <a href="https://github.com/TinoMakesDev/memory-calendar" target="_blank" class="btn btn-primary" onclick="event.stopPropagation();">
                         Download on GitHub
                     </a>
-                    <!-- Кнопка Читать статью -->
+                    <!-- Read Article Button -->
                     <a href="./memory-calendar.html" class="btn btn-secondary">
                         Read Article
                     </a>
                 </div>
             </div>
 
-            <!-- Заглушка -->
+            <!-- Placeholder -->
             <div style="text-align: center; color: #94a3b8; padding: 20px 0; font-size: 15px;">
                 (More apps coming soon...)
             </div>
@@ -242,7 +242,7 @@
         </div>
     </footer>
 
-    <!-- Скрипт для поиска -->
+    <!-- Search Script -->
     <script>
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
