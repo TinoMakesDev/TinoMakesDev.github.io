@@ -20,7 +20,7 @@
         "price": "0",
         "priceCurrency": "USD"
       },
-      "description": "A free, open-source, offline photo organizer and viewer that sorts your media library into a visual calendar. Includes duplicate detection and virtual event albums.",
+      "description": "A free, source-available, offline photo organizer and viewer that sorts your media library into a visual calendar. Includes duplicate detection and virtual event albums.",
       "url": "https://github.com/TinoMakesDev/memory-calendar"
     }
     </script>
