@@ -1,0 +1,24 @@
+# TinoMakesDev
+
+> Official website of TinoMakesDev. Free, source-available, privacy-focused, and local-first desktop applications.
+
+## Applications
+
+- [Memory Calendar](https://tinomakesdev.github.io/memory-calendar.html): A free, source-available, offline photo organizer and viewer for Windows, macOS, and Linux. It automatically sorts media libraries into a visual calendar (Days, Months, Years) using EXIF data or folder names. 
+
+## Key Features of Memory Calendar
+- Free photo organizer and viewer.
+- 100% offline, privacy-focused, no cloud sync, no telemetry.
+- 5 View modes: Days, Months, Years, Events, Duplicates.
+- Duplicate photo detection using SHA-256 hashing.
+- Safe deletion: files go to an app-managed Trash folder, undoable with Ctrl+Z.
+- Virtual "Events" allow grouping photos from different folders without duplicating files.
+- Supports JPG, PNG, HEIC/HEIF, WEBP, TIFF, and video (MP4, MOV, AVI).
+
+## Important Links
+- [Read the full article](https://tinomakesdev.github.io/memory-calendar.html)
+- [Download on GitHub](https://github.com/TinoMakesDev/memory-calendar)
+- [Main Website](https://tinomakesdev.github.io/)
+
+## Licensing
+The application is distributed under the Business Source License 1.1 (BSL 1.1). It is free for personal use and organizations with 10 or fewer employees. It is NOT open-source, but source-available.
