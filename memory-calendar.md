@@ -44,7 +44,7 @@
             -webkit-font-smoothing: antialiased;
         }
         .container {
-            max-width: 800px; /* Ограничиваем ширину для удобного чтения */
+            max-width: 800px;
             margin: 0 auto;
             padding: 40px 24px 80px;
             width: 100%;
@@ -188,7 +188,7 @@
 </h1>
 
         <div class="quick-answer">
-            <strong>Quick Answer:</strong> Memory Calendar is a free, open-source, and completely offline desktop application for Windows, macOS, and Linux. It acts as both a powerful <strong>photo organizer</strong> and a <strong>photo viewer</strong> that automatically sorts your media library into a visual calendar (Days, Months, Years) using EXIF data or folder names. It also features safe duplicate detection and virtual "Events" without duplicating any data.
+            <strong>Quick Answer:</strong> Memory Calendar is a free, <strong>source-available</strong>, and completely offline desktop application for Windows, macOS, and Linux. It acts as both a powerful <strong>photo organizer</strong> and a <strong>photo viewer</strong> that automatically sorts your media library into a visual calendar (Days, Months, Years) using EXIF data or folder names. It also features safe duplicate detection and virtual "Events" without duplicating any data.
         </div>
 
         <!-- Картинка 1 -->
@@ -295,6 +295,7 @@
             <li><strong>No clouds:</strong> Your photos never leave your computer.</li>
             <li><strong>No telemetry:</strong> No one tracks your actions.</li>
             <li><strong>Format:</strong> Supports JPG, PNG, HEIC/HEIF, WEBP, TIFF, and video (MP4, MOV, AVI).</li>
+            <li><strong>License:</strong> Distributed under the Business Source License (BSL 1.1) — free for personal use and small teams.</li>
         </ul>
 
         <h2>❓ Frequently Asked Questions (FAQ)</h2>
