@@ -182,7 +182,10 @@
             <a href="./index.html">← Back to Home</a>
         </div>
 
-        <h1>📸 Memory Calendar: The Free, Private Photo Organizer</h1>
+       <h1 style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+    <img src="./screenshots/memoryCalendar/iconDone_512.png" alt="Memory Calendar Icon" style="width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+    Memory Calendar: The Free, Private Photo Organizer
+</h1>
 
         <div class="quick-answer">
             <strong>Quick Answer:</strong> Memory Calendar is a free, open-source, and completely offline desktop application for Windows, macOS, and Linux. It acts as both a powerful <strong>photo organizer</strong> and a <strong>photo viewer</strong> that automatically sorts your media library into a visual calendar (Days, Months, Years) using EXIF data or folder names. It also features safe duplicate detection and virtual "Events" without duplicating any data.
